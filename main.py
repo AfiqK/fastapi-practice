@@ -22,7 +22,7 @@ app.include_router(blog_post.router)
 
 @app.get('/')
 def index():
-  return {'message': 'Hello world!'}
+  return {'message': 'Hello dunia!'}
 
 @app.exception_handler(StoryException)
 def story_exception_handler(request: Request, exc: StoryException):
