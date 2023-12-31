@@ -20,7 +20,7 @@ app.include_router(blog_get.router)
 app.include_router(blog_post.router)
 
 
-@app.get('/hello')
+@app.get('/')
 def index():
   return {'message': 'Hello world!'}
 
