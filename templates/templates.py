@@ -1,6 +1,5 @@
-from starlette.background import BackgroundTasks
 from schemas import ProductBase
-from fastapi import APIRouter
+from fastapi import APIRouter, BackgroundTasks
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.requests import Request
@@ -26,7 +25,7 @@ def get_product(id: str,
       "id": id,
       "title": product.title,
       "description": product.description,
-      "price": f"RM{product.price}"
+      "price": product.price
     }
   )
 
